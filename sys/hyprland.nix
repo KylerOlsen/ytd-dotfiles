@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
 
@@ -10,15 +10,10 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
-  hardware = {
-    opengl.enable = true;
-  };
+  hardware.graphics.enable = true;
 
   environment.systemPackages = with pkgs; [
-    (waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      })
-    )
+    waybar
     dunst
     libnotify
     kitty
