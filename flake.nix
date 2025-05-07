@@ -13,21 +13,21 @@
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-  in{
-  	nixosConfigurations = {
-  	  nixos-ytd = lib.nixosSystem {
-  	  	inherit system;
-  	  	modules = [ ./configuration.nix ];
-  	  };
-  	};
+  in {
+    nixosConfigurations = {
+      nixos-ytd = lib.nixosSystem {
+        inherit system;
+        modules = [ ./configuration.nix ];
+      };
+    };
 
-  	homeConfigurations = {
-  	  kyler = home-manager.lib.homeManagerConfiguration {
-  	  	inherit pkgs;
-  	  	modules = [ ./home.nix ];
-  	  };
-  	};
-  	
+    homeConfigurations = {
+      kyler = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./home.nix ];
+      };
+    };
+
   };
 
 }
