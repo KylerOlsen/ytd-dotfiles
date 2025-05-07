@@ -2,11 +2,11 @@
 
   description = "Kyler Olsen's flake";
 
-  input = {
+  inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.11";
   };
 
-  output = { self, nixpkgs, ... } :
+  outputs = { self, nixpkgs, ... } :
   let
     lib = nixpkgs.lib;
   in {
