@@ -17,14 +17,14 @@
     nixosConfigurations = {
       nixos-ytd = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ ./sys/configuration.nix ];
       };
     };
 
     homeConfigurations = {
       kyler = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
+        modules = [ ./home/home.nix ];
       };
     };
 
