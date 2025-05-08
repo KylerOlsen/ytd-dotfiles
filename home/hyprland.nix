@@ -3,6 +3,7 @@
 {
   imports = [
     ./waybar/waybar.nix
+    ./mc/prism.nix
   ];
 
   home.packages = with pkgs; [
@@ -68,6 +69,7 @@
         # "$mainMod, N, exec, multimc -l \"Dragon Egg Dome\""
         # "$mainMod, M, exec, multimc -l \"Purple Cello Server\""
         # "$mainMod SHIFT, M, exec, multimc"
+        "$mainMod , M, exec, prismlauncher"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
