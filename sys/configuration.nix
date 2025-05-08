@@ -56,6 +56,11 @@
     git
   ];
 
+  networking.extraHosts =
+  ''
+    192.168.1.122 git.purplecello.org
+  '';
+
   services.openssh.enable = true;
 
   # This value determines the NixOS release from which the default
