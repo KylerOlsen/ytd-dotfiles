@@ -15,7 +15,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      nixos-ytd = lib.nixosSystem {
+      moonk4-l = lib.nixosSystem {
         inherit system;
         modules = [ ./sys/configuration.nix ];
       };
