@@ -5,8 +5,8 @@
     wl-clipboard
     dolphin 
     wofi
-    # google-chrome-stable
-    # firefox
+    google-chrome
+    firefox
   ];
 
   wayland.windowManager.hyprland = {
@@ -54,8 +54,8 @@
         # Internet Browsers
         # "$mainMod, B, exec, google-chrome-stable --profile-directory=\"Default\" --new-window"
         # "$mainMod ALT, B, exec, google-chrome-stable --profile-directory=\"Profile 1\" --new-window"
-        # "$mainMod, B, exec, google-chrome-stable"
-        # "$mainMod ALT, B, exec, firefox"
+        "$mainMod, B, exec, google-chrome-stable"
+        "$mainMod ALT, B, exec, firefox"
 
         # Minecraft
         # "$mainMod, N, exec, multimc -l \"Dragon Egg Dome\""
