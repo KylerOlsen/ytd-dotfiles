@@ -59,6 +59,7 @@
     wget
     micro
     git
+    mpd
   ];
 
   networking.extraHosts =

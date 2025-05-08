@@ -1,12 +1,19 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./waybar/waybar.nix
+  ];
+
   home.packages = with pkgs; [
     wl-clipboard
     dolphin 
     wofi
     google-chrome
     firefox
+    ario
+    procps
+    font-awesome
   ];
 
   wayland.windowManager.hyprland = {
@@ -19,7 +26,7 @@
 
       bind = [
         "$mainMod, W, killactive,"
-        "$mainMod, Q, exec, wlogout"
+        # "$mainMod, Q, exec, wlogout"
         "$mainMod SHIFT, Q, exit,"
         "$mainMod, F, togglefloating,"
         "$mainMod, P, pseudo,"
@@ -31,8 +38,8 @@
         # Lock desktop
         # "$mainMod, L, exec, bash .config/swaylock/lock.sh"
 
-        # Reload waybar
-        # "$mainMod SHIFT, B, exec, killall waybar && waybar"
+        # Reload waybar/waybar
+        "$mainMod SHIFT, B, exec, pkill waybar && waybar"
 
         # Open terminal
         "$mainMod, T, exec, $terminal"
@@ -41,7 +48,7 @@
         # "$mainMod, SPACE, exec, $menu"
 
         # Open VS Code
-        # "$mainMod, X, exec, code"
+        "$mainMod, X, exec, code"
 
         # Clipboard History
         # "$mainMod, V, exec, cliphist list | wofi --show dmenu -H 600 -W 900 | cliphist decode | wl-copy"

@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hyprland.nix
-    ];
+  imports = [
+    ./vscode.nix
+    ./hyprland.nix
+  ];
 
   home.username = "kyler";
   home.homeDirectory = "/home/kyler";
